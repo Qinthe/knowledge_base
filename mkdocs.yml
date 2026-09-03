@@ -1,0 +1,12 @@
+site_name: My Knowlegde Library
+theme:
+  name: material
+
+nav:
+  - main: index.md
+  - infrastructure:
+    - ZeroTier: infrastructure/zerotier/index.md
+  - servers:
+    - Nginx: servers/nginx/index.md
+  - frameworks: frameworks/index.md
+  - DevOps: devops/index.md
