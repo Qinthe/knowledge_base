@@ -1,12 +1,93 @@
-site_name: My Knowlegde Library
+# MkDocs 站点配置
+site_name: 技术知识库
+site_description: 个人技术知识库 — 基础设施、服务器与 DevOps 实践记录
+site_author: Qin
+site_url: https://qinthe.github.io/knowledge_base/
+
+repo_name: Qinthe/knowledge_base
+repo_url: https://github.com/Qinthe/knowledge_base
+edit_uri: edit/main/docs/
+
 theme:
   name: material
+  language: zh
+  icon:
+    repo: fontawesome/brands/github
+    logo: material/bookshelf
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到浅色模式
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - toc.follow
 
 nav:
-  - main: index.md
-  - infrastructure:
-    - ZeroTier: infrastructure/zerotier/index.md
-  - servers:
-    - Nginx: servers/nginx/index.md
-  - frameworks: frameworks/index.md
+  - 首页: index.md
+  - 基础设施:
+      - infrastructure/index.md
+      - CI/CD:
+          - infrastructure/cicd/index.md
+          - GitHub Actions 部署: infrastructure/cicd/github-actions.md
+      - 局域网组网:
+          - infrastructure/local_area_network/index.md
+          - ZeroTier 组网: infrastructure/local_area_network/zerotier.md
+          - ZeroTier Moon（弃用）: infrastructure/local_area_network/zerotier-moon.md
+  - 服务器:
+      - servers/index.md
+      - Nginx:
+          - servers/reverse_proxy_server/index.md
+          - 反向代理: servers/reverse_proxy_server/nginx.md
   - DevOps: devops/index.md
+  - 开发框架: frameworks/index.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - def_list
+  - toc:
+      permalink: true
+      permalink_title: 跳转到此节
+  - pymdownx.highlight:
+      anchor_linenums: true
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search:
+      lang: zh
