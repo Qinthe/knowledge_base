@@ -1,5 +1,11 @@
 # 开发框架
 
-开发框架使用与学习笔记。
+<div class="grid cards" markdown>
 
-> 📝 此分类目前还没有内容，后续会逐步补充。
+-   :material-robot:{ .lg .middle } [**Agent 开发**](agent/index.md)
+
+    ---
+
+    LangChain 与 LangGraph：LLM 应用与智能体开发框架。
+
+</div>

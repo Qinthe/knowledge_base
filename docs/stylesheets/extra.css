@@ -1,0 +1,24 @@
+/* ============================================
+   缩小底部「上一页 / 下一页」导航
+   - 收紧上下外边距，降低整块高度
+   - 缩小「上一页 / 下一页」标签与页面标题字号
+   ============================================ */
+.md-footer__inner {
+  padding: 0.05rem 0;
+}
+
+.md-footer__link {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.md-footer__title {
+  font-size: 0.7rem;
+  margin-bottom: 0.2rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+}
+
+.md-footer__direction {
+  font-size: 0.52rem;
+}

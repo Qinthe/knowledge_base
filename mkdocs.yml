@@ -1,12 +1,15 @@
 # MkDocs 站点配置
-site_name: 技术知识库
-site_description: 个人技术知识库 — 基础设施、服务器与 DevOps 实践记录
+site_name: 知识树
+site_description: 知识树 — 基础设施、服务器与 DevOps 实践记录
 site_author: Qin
 site_url: https://qinthe.github.io/knowledge_base/
 
 repo_name: Qinthe/knowledge_base
 repo_url: https://github.com/Qinthe/knowledge_base
 edit_uri: edit/main/docs/
+
+extra_css:
+  - stylesheets/extra.css
 
 theme:
   name: material
@@ -45,23 +48,22 @@ theme:
     - toc.follow
 
 nav:
-  - 首页: index.md
-  - 基础设施:
-      - infrastructure/index.md
-      - CI/CD:
-          - infrastructure/cicd/index.md
-          - GitHub Actions 部署: infrastructure/cicd/github-actions.md
-      - 局域网组网:
-          - infrastructure/local_area_network/index.md
-          - ZeroTier 组网: infrastructure/local_area_network/zerotier.md
-          - ZeroTier Moon（弃用）: infrastructure/local_area_network/zerotier-moon.md
-  - 服务器:
-      - servers/index.md
-      - Nginx:
-          - servers/reverse_proxy_server/index.md
-          - 反向代理: servers/reverse_proxy_server/nginx.md
-  - DevOps: devops/index.md
-  - 开发框架: frameworks/index.md
+  - 首页: 
+    - index.md
+  - 基础设施: 
+    - infrastructure/index.md
+  - 服务器: 
+    - servers/index.md
+  - DevOps: 
+    - devops/index.md
+  - 开发框架:
+      - frameworks/index.md
+      - Agent 开发:
+          - frameworks/agent/index.md
+  - 数据分析:
+      - data_analysis/index.md
+      - 数据湖:
+          - data_analysis/data_lake/index.md
 
 markdown_extensions:
   - admonition
