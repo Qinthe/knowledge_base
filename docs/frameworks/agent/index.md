@@ -2,18 +2,9 @@
 
 LangChain 与 LangGraph：LLM 应用与智能体开发。
 
-<div class="grid cards" markdown>
+## 文档列表
 
--   :material-link-variant:{ .lg .middle } [**LangChain**](langchain.md)
-
-    ---
-
-    LLM 应用开发框架：统一接口连接大模型，链式组合 Prompt、模型与工具。
-
--   :material-graph:{ .lg .middle } [**LangGraph**](langgraph.md)
-
-    ---
-
-    基于图的 Agent 编排框架：用状态机和节点构建多步骤、可循环的智能体。
-
-</div>
+- [LangChain 说明](langchain.md) — LangChain 是什么、核心概念与生态
+- [LangChain 开始使用](langchain-getting-started.md) — 安装、配置 DeepSeek 与常见用法
+- [LangGraph 说明](langgraph.md) — 图编排框架的核心概念与适用场景
+- [LangGraph 开始使用](langgraph-getting-started.md) — 最小 StateGraph 示例与循环结构
